@@ -333,3 +333,34 @@ body{
 .page li a:active{
   color: #000;
 }
+
+@media only screen and (max-width:768px){
+  .hotSpot{
+    width: 80%;
+  }
+  
+  .hotList{
+    flex-wrap: wrap;
+  }
+  
+  .hotList li{
+    width: 25%;
+  }
+  
+  .hotList li button{
+    font-size: 18px;
+    padding: 8px 0px;
+    width: 80%;
+  }
+  
+  .selectBox{
+    width: 65%;
+  }
+  .selection{
+    width: 100%;
+  }
+  
+  .title{
+    font-size: 38px; 
+  }
+}
