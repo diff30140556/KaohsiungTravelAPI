@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaohsiung Travel</title>
+    <link rel="icon" href="https://i.imgur.com/G3s12O3.png">
+    <link rel="short icon" href="https://i.imgur.com/G3s12O3.png">
+    <meta name="description" content="高雄旅遊資訊 - 歡迎來到台灣的繁華都市高雄，這裡為您列出了高雄市內各大知名旅遊觀光景點，帶你一起遊玩高雄GO！">
+    <meta name="keywords" content="高雄旅遊資訊, 高雄, 旅遊, 觀光景點, 高雄市, 一日遊">
+
+    <meta property="og:title" content="高雄旅遊資訊網">
+    <meta property="og:description" content="歡迎來到台灣的繁華都市高雄，這裡為您列出了高雄市內各大知名旅遊觀光景點，帶你一起遊玩高雄GO！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diff30140556.github.io/KaohsiungTravelAPI/">
+    <meta property="og:image" content="https://hexschool.github.io/JavaScript_HomeWork/assets/the-urban-landscape-1698285.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <link rel="stylesheet" href="CSS/all.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="banner">
+            <h1 class="title">高雄旅遊資訊</h1>
+
+            <div class="selectBox">
+                <select class="selection" name="selection" id="selection">
+                    <optgroup class="areaList" label="--請選擇行政區--"></optgroup>
+                </select>
+            </div>
+            
+        </div>
+        <div class="hotSpot">
+            <h2>熱門行政區</h2>
+            <ul class="hotList">
+              <li><button>苓雅區</button></li>
+              <li><button>三民區</button></li>
+              <li><button>新興區</button></li>
+              <li><button>鹽埕區</button></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+           <div class="arrow">
+            <a href="#currentAreaId">
+              <img src="https://hexschool.github.io/JavaScript_HomeWork/assets/icons_down.png" alt="arrow-down">
+            </a>
+           </div>
+           
+           <h3 class="currentArea" id="currentAreaId"></h3>
+
+           <ul class="list">
+            
+          </ul>
+          <div class="pageBox">
+            <ul class="page">
+              
+            </ul>
+          </div>
+        </div>
+        <div class="footer">
+          <h2>高雄旅遊網</h2>
+          <h2>資料來源：高雄市政府</h2>
+        </div>
+</div>
+<script src="JS/all.js"></script>
+<script src="http://raw.githack.com/gblazex/smoothscroll-for-websites/master/SmoothScroll.js"></script>
+</body>
+</html>
