@@ -134,16 +134,8 @@ function pagination(currentPage){
     str += '<li><a href="#" class="pagination" data-number="'+(i+1)+'">'+(i+1)+'</a></li>';
     }
   
-    switch(true){
-      case currentPage==1:
-        page.innerHTML = '<li><a href="#" data-number="'+(currentPage-1)+'">< Prev</a></li>'+str+'<li><a href="#" data-number="'+(currentPage+1)+'" class="nextPage">Next ></a></li>';
-        break;
-      case currentPage>1 && currentPage<totalPages:
-        page.innerHTML = '<li><a href="#" data-number="'+(currentPage-1)+'" class="previousPage">< Prev</a></li>'+str+'<li><a href="#" data-number="'+(currentPage+1)+'" class="nextPage">Next ></a></li>';
-        break;
-      case currentPage==totalPages:
-        page.innerHTML = '<li><a href="#" data-number="'+(currentPage-1)+'" class="previousPage">< Prev</a></li>'+str+'<li><a href="#" data-number="'+(currentPage+1)+'">Next ></a></li>';
-        break;}
+  page.innerHTML = '<li><a href="#" data-number="'+(currentPage-1)+'" class="previousPage">< Prev</a></li>'+str+'<li><a href="#" data-number="'+(currentPage+1)+'" class="nextPage">Next ></a></li>';
+
 }
 
 var currentPage = '';
@@ -169,13 +161,22 @@ function pageColor(e){
   var totalPages = Math.ceil(num.length/contentLen);
   page.childNodes[e].childNodes[0].style.backgroundColor = '#D1BBFF';
   
-  switch(true){
-    case e==1:
+   switch(true){
+    case e==1 && e<totalPages:
       page.childNodes[e-1].childNodes[0].style.color = 'rgba(74,74,74,0.5)';
+      page.childNodes[e-1].childNodes[0].style.textDecoration = 'unset';
       break;
     
-    case e==totalPages:
+    case e==totalPages && e>1:
       page.childNodes[e+1].childNodes[0].style.color = 'rgba(74,74,74,0.5)';
+      page.childNodes[e+1].childNodes[0].style.textDecoration = 'unset';
+      break;
+      
+    case e==1:
+      page.childNodes[e-1].childNodes[0].style.color = 'rgba(74,74,74,0.5)';
+      page.childNodes[e+1].childNodes[0].style.color = 'rgba(74,74,74,0.5)';
+      page.childNodes[e+1].childNodes[0].style.textDecoration = 'unset';
+      page.childNodes[e-1].childNodes[0].style.textDecoration = 'unset';
       break;
   }
 }
