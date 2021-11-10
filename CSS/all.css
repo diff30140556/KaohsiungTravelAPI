@@ -61,7 +61,6 @@ font-family: '微軟正黑體';
 .wrap{
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #000;
   position: relative;
   scroll-behavior: smooth;
 }
