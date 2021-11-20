@@ -203,15 +203,16 @@ margin-bottom: 40px;
 }
 
 .list{
-max-width: 1400px;
+width: 100%;
 min-width: 700px;
 display: flex;
-justify-content: space-evenly;
+justify-content: center;
 flex-wrap: wrap;
-padding: 0px 80px;
+padding: 0px 60px;
 }
 .list li{
 width: 500px;
+margin: 0px 10px;
 margin-bottom: 60px;
 box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
@@ -304,6 +305,7 @@ border-radius: 5px;
 }
 
 .pageBox{
+margin-top: 60px;
 margin-bottom: 40px;
 }
 .page{
@@ -344,7 +346,7 @@ position: relative;
 
 .goToTop{
 position: absolute;
-right: -4%;
+right: 4%;
 bottom: 180px;
 opacity: 0%;
 }
@@ -401,7 +403,6 @@ animation-fill-mode: forwards;
   .list li{
     width: 85%;
   }
-
 }
 
 @media only screen and (max-width:320px){
