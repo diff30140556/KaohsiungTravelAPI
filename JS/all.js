@@ -34,7 +34,7 @@ xhr.onload = function load(){
 // 解析資料並丟進空物件，計算資料總數。
 function print(){
   let dataContent = JSON.parse(xhr.responseText);
-  jsonData = dataContent.data.XML_Head.Infos.Info;
+  jsonData = dataContent.result.records;
   let len = jsonData.length;
 
 // 將所有區域從地址的第6、7、8個文字抓取出來並丟入空陣列。
