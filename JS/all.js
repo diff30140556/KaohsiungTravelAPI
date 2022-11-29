@@ -4,7 +4,8 @@ let jsonData = {};
 
 // 建立新的XHR連線，資料抓取完執行Load函數
 let xhr = new XMLHttpRequest();
-xhr.open('get','https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c',true);
+// xhr.open('get','https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c',true);
+xhr.open('get','https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json',true);
 xhr.send(null);
 xhr.onload = function load(){
   print();
