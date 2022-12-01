@@ -5,7 +5,7 @@ let jsonData = {};
 // 建立新的XHR連線，資料抓取完執行Load函數
 let xhr = new XMLHttpRequest();
 // xhr.open('get','https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c',true);
-xhr.open('get','https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json',true);
+xhr.open('get','https://raw.githubusercontent.com/diff30140556/KaohsiungTravelAPI/main/JS/data.json',true);
 xhr.send(null);
 xhr.onload = function load(){
   print();
@@ -42,7 +42,7 @@ function print(){
 
   for (let i=0; i<len; i++){
   let str = jsonData[i].Add;
-  let catchAreaName = str.split("")[6]+str.split("")[7]+str.split("")[8];
+  let catchAreaName = str.split("")[3]+str.split("")[4]+str.split("")[5];
   areaArray.push(catchAreaName);
 
 // 篩選掉重覆的區域
@@ -94,7 +94,7 @@ function result(num1){
 // 如果資料的區域等於所選的區域，將此陣列放入num陣列中
   for (let i=0; i<len; i++){
     let zone = jsonData[i].Add;
-    let catchAreaName = zone.split("")[6]+zone.split("")[7]+zone.split("")[8];
+    let catchAreaName = zone.split("")[3]+zone.split("")[4]+zone.split("")[5];
     if (area === catchAreaName){
       num.push(jsonData[i]);
     }
@@ -114,7 +114,7 @@ function result(num1){
     }    
 
 // 將結果放入內容中UL LI底下
-    let printAreaName = num[i].Add.split("")[6]+num[i].Add.split("")[7]+num[i].Add.split("")[8];
+    let printAreaName = num[i].Add.split("")[3]+num[i].Add.split("")[4]+num[i].Add.split("")[5];
     let liList = 
     `<li>
       <div class="pic" style="background: url(${num[i].Picture1})center no-repeat;background-size: 110%;">
